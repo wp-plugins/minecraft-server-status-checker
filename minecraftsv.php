@@ -28,11 +28,12 @@
 	function control(){
 	    	$data = get_option('mcsv_status');
 		?>
+			<p><label>Title : <input name="widget_title" type="text" value="<?php echo $data['widget_title']; ?>" /></label></p>
 	    	<p><label>IP : <input name="server_ip" type="text" value="<?php echo $data['server_ip']; ?>" /></label></p>
 	    	<p><label>Port (25565) : <input name="server_port" size="5"  type="text" value="<?php echo $data['server_port']; ?>" /></label></p>
 		<?php
 			if (isset($_POST['server_ip'])){
-			$data['widget_title'] = attribute_escape($_POST['server_ip']);
+			$data['widget_title'] = attribute_escape($_POST['widget_title']);
 			$data['server_ip'] = attribute_escape($_POST['server_ip']);
 			$data['server_port'] = attribute_escape($_POST['server_port']);
 			update_option('mcsv_status', $data);
@@ -45,7 +46,7 @@
 	  		wp_enqueue_style('mcsv', PLUGIN_URL.'/css/mcsv_button.css');
 	  
 	  		$data = get_option('mcsv_status');
-	  		$title = $data['widget_title';
+	  		$title = $data['widget_title'];
 	  		$port = $data['server_port'];
 	  		if(empty($port)) {
 	  			$port = "25565";
