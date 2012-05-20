@@ -1,10 +1,10 @@
-=== Duplicate Post ===
+=== Minecraft Server Status Checker ===
 Contributors: Verblick
-Donate link: http://www.noadblock.com
-Tags: adblock, block, ad, anti
-Requires at least: 3.0
-Tested up to: 3.3.1
-Stable tag: 0.1.2
+Donate link: http://plugins.minecraftsv.com
+Tags: minecraft, server, status, checker, bukkit, vanilla
+Requires at least: 2.5
+Tested up to: 3.3.2
+Stable tag: 0.1.0
 
 == Description ==
 
