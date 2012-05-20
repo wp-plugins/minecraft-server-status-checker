@@ -32,6 +32,7 @@
 	    	<p><label>Port (25565) : <input name="server_port" size="5"  type="text" value="<?php echo $data['server_port']; ?>" /></label></p>
 		<?php
 			if (isset($_POST['server_ip'])){
+			$data['widget_title'] = attribute_escape($_POST['server_ip']);
 			$data['server_ip'] = attribute_escape($_POST['server_ip']);
 			$data['server_port'] = attribute_escape($_POST['server_port']);
 			update_option('mcsv_status', $data);
@@ -44,14 +45,16 @@
 	  		wp_enqueue_style('mcsv', PLUGIN_URL.'/css/mcsv_button.css');
 	  
 	  		$data = get_option('mcsv_status');
-	  		
+	  		$title = $data['widget_title';
 	  		$port = $data['server_port'];
 	  		if(empty($port)) {
 	  			$port = "25565";
 	  		}
 	  		
 			echo $args['before_widget'];
-			echo $args['before_title'] . 'Your widget title' . $args['after_title'];
+			if(!empty($title)) {
+			echo $args['before_title'] . $title . $args['after_title'];
+			}
 			// Check Server Status
 			
 			$online = @fsockopen($data['server_ip'], $port, $errno, $errstr, 1);

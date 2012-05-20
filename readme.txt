@@ -4,7 +4,7 @@ Donate link: http://plugins.minecraftsv.com
 Tags: minecraft, server, status, checker, bukkit, vanilla
 Requires at least: 2.5
 Tested up to: 3.3.2
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 
 == Description ==
 
@@ -27,12 +27,10 @@ Try de-activate and activate it again
 
 == Screenshots ==
 
-== Upgrade Notice ==
-
-= 0.1 =
-First release
-
 == Changelog ==
+
+= v0.1.1 - May 21, 2012 =
+* Fixed widget title bug
 
 = v0.1 - May 19, 2012 =
 * Start version
